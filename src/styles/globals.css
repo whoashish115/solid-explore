@@ -1,0 +1,205 @@
+@import "tailwindcss";
+
+
+
+@font-face {
+  font-family: 'Anada';
+  src: url('/assets/fonts/Anada-Regular.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@theme {
+  --color-primary: light-dark(rgb(236, 72, 153), rgb(255, 78, 166));
+  --color-secondary: light-dark(rgb(244, 114, 182), rgb(255, 120, 190));
+  --color-tertiary: light-dark(rgb(219, 39, 119), rgb(236, 72, 153));
+
+  --color-default: light-dark(rgb(255, 255, 255), rgb(12, 8, 18));
+  --color-paper: light-dark(rgb(255, 245, 250), rgb(20, 12, 28));
+  --color-box: light-dark(rgb(255, 236, 245), rgb(30, 18, 42));
+  --color-highlight: light-dark(rgb(255, 220, 235), rgb(48, 24, 64));
+
+  --color-title: light-dark(rgb(50, 20, 35), rgb(255, 235, 245));
+  --color-paragraph: light-dark(rgb(90, 60, 75), rgb(225, 205, 215));
+  --color-span: light-dark(rgb(180, 30, 95), rgb(255, 170, 210));
+
+  --color-outline: light-dark(rgb(255, 205, 225), rgb(75, 40, 95));
+  --color-scroll-body-bg: light-dark(rgb(255, 248, 252), rgb(16, 12, 24));
+  --color-scroll-body-thumb: light-dark(rgb(245, 140, 190), rgb(165, 90, 145));
+
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Anada", sans-serif;
+}
+
+body {
+  @apply  text-paragraph;
+  scroll-behavior: smooth;
+  font-family: var(--font-primary);
+  overflow-x: hidden;
+  width:100vw;
+  background-color: var(--color-default);
+  background: radial-gradient(circle, transparent 20%, var(--color-default) 20%, var(--color-default) 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, var(--color-default) 20%, var(--color-default) 80%, transparent 80%, transparent) 50px 50px, linear-gradient(var(--color-primary) 2px, transparent 2px) 0 -1px, linear-gradient(90deg, var(--color-primary) 2px, var(--color-default) 2px) -1px 0;
+background-size: 200px 200px, 100px 100px, 50px 50px, 50px 50px;
+}
+
+img {
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+::selection {
+  @apply bg-primary text-white;
+}
+::-webkit-scrollbar {
+  @apply bg-scroll-body-bg;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-scroll-body-thumb border-2 border-scroll-body-bg
+}
+.animate-float {
+  animation: float 2s infinite;
+}
+
+
+.font-primary{
+  font-family: var(--font-primary);
+}
+.font-secondary{
+  font-family: var(--font-secondary);
+  padding-top:8px;
+  padding-bottom:8px;
+
+}
